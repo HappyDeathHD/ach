@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор ачивок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Генератор ачивок</h1>
+    
+    <form id="achForm">
+        <div>
+            <label for="to">Кому:</label>
+            <input type="text" id="to" placeholder="Например: @username или имя" required>
+        </div>
+        
+        <div>
+            <label for="date">Когда:</label>
+            <input type="date" id="date" required>
+        </div>
+        
+        <div>
+            <label for="title">Название:</label>
+            <input type="text" id="title" placeholder="Название ачивки" required>
+        </div>
+        
+        <div>
+            <label for="desc">Описание:</label>
+            <textarea id="desc" rows="4" placeholder="Описание ачивки (переносы строк сохраняются)" required></textarea>
+        </div>
+        
+        <div>
+            <label for="image">Картинка:</label>
+            <input type="file" id="image" accept="image/*" required>
+        </div>
+        
+        <button type="submit">Создать ачивку</button>
+    </form>
+    
+    <canvas id="preview" width="3173" height="885"></canvas>
+    <a id="downloadLink" style="display: none;">📥 Скачать PNG</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -29,7 +29,7 @@ const today = new Date().toISOString().split('T')[0];
 document.getElementById('date').value = today;
 
 function waitFontLoaded() {
-    return document.fonts.load('40px UnquietSpirit');
+    return document.fonts.load('40px LetoTextSansDefect');
 }
 
 function formatDateDDMMYYYY(dateStr) {
@@ -41,7 +41,7 @@ function formatDateDDMMYYYY(dateStr) {
 }
 
 function drawTextOutlined(text, x, y, fontSize, align, baseline) {
-    const font = `${fontSize}px "UnquietSpirit", serif`;
+    const font = `${fontSize}px "LetoTextSansDefect", serif`;
     ctx.font = font;
     ctx.textAlign = align;
     ctx.textBaseline = baseline;
@@ -87,7 +87,7 @@ function drawBlurredImage(img, x, y, size) {
 function getFittedFontSize(textLines, maxWidth, maxHeight, maxFontSize, minFontSize) {
     let fontSize = maxFontSize;
     while (fontSize > minFontSize) {
-        ctx.font = `${fontSize}px "UnquietSpirit", serif`;
+        ctx.font = `${fontSize}px "LetoTextSansDefect", serif`;
         const lineHeight = fontSize * 1.2;
         let fits = true;
 
@@ -146,7 +146,7 @@ form.addEventListener('submit', async (e) => {
     const titleMaxWidth = CANVAS_WIDTH * 0.8;
     let titleFontSize = TITLE_MAX_FONT;
     while (titleFontSize > TITLE_MIN_FONT) {
-        ctx.font = `${titleFontSize}px "UnquietSpirit", serif`;
+        ctx.font = `${titleFontSize}px "LetoTextSansDefect", serif`;
         const width = ctx.measureText(title).width;
         if (width <= titleMaxWidth) break;
         titleFontSize -= 1;
@@ -189,7 +189,7 @@ form.addEventListener('submit', async (e) => {
     drawTextOutlined(
         `${to}`,
         DESC_MAX_X - 120,
-        DESC_MAX_Y - 40,
+        DESC_MAX_Y,
         toFontSize,
         'right',
         'bottom'

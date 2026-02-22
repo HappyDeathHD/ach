@@ -142,8 +142,8 @@ form.addEventListener('submit', async (e) => {
     drawBlurredImage(userImg, IMG_OFFSET_X, IMG_OFFSET_Y, IMG_SIZE);
 
     const TITLE_MAX_FONT = 200;
-    const TITLE_MIN_FONT = 120;
-    const titleMaxWidth = CANVAS_WIDTH * 0.8;
+    const TITLE_MIN_FONT = 60;
+    const titleMaxWidth = CANVAS_WIDTH * 0.6;
     let titleFontSize = TITLE_MAX_FONT;
     while (titleFontSize > TITLE_MIN_FONT) {
         ctx.font = `${titleFontSize}px "LetoTextSansDefect", serif`;
